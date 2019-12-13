@@ -35,9 +35,9 @@ const getPokemonData = (pokemonObj) => {
 }
 
 //display pokemon
-const displayPokemon = () => {
-  const leftPokemon = document.getElementById('left_pokemon')
-  const rightPokemon = document.getElementById('right_pokemon')
+const displayPokemon = (dir) => {
+  const pokemonList = document.getElementById(`${dir}_pokemon`);
+
   arrayOfPokemon.map(pokemon => {
     const li = document.createElement('li')
     const picture = document.createElement('img')
@@ -51,11 +51,16 @@ const displayPokemon = () => {
     li.appendChild(text)
     li.appendChild(picture)
     li.appendChild(button)
-    leftPokemon.appendChild(li)
-    rightPokemon.append(li)
+    // leftPokemon.append(li)
+    pokemonList.append(li)
     
   })
 }
+//Show the selection
+
+//To judge the who's win
+
+//To reset the game
 
 
 

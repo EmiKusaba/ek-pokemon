@@ -1,5 +1,12 @@
 
 .container{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
+  float:center;
+  width:100%;
+  /* grid-template-columns: 1fr 1fr; */
+}
+#left_pokemon{
+  border: 1px solid blue
+}
+#right_pokemon{
+  border: 1px solid red
 }
