@@ -8,8 +8,9 @@
 </head>
 <body>
   <div class="container">
-    <div> <button onclick="displayPokemon('left')">list</button><ul id="left_pokemon"></ul></div>
-    <div> <button onclick="displayPokemon('right')">list</button><ul id="right_pokemon"></ul></div>
+    <div class="selection_left"> <button onclick="displayPokemon('left')">list</button><ul id="left_pokemon"></ul></div>
+    <div class="arena"><ul id="battle"><button onclick="battle()">Battle</button></ul></div>
+    <div class="selection_right"> <button class="btn" onclick="displayPokemon('right')">list</button><ul id="right_pokemon"></ul></div>
   </div>
   
 </body>

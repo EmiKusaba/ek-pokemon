@@ -1,12 +1,39 @@
 
 .container{
-  float:center;
+  display:grid;
   width:100%;
-  /* grid-template-columns: 1fr 1fr; */
+  grid-template-areas:"leftCol arena rightCol";
+  grid-template-columns: 1fr 2fr 1fr;
+  
 }
 #left_pokemon{
-  border: 1px solid blue
+  border: 1px solid blue;
+  
 }
 #right_pokemon{
-  border: 1px solid red
+  border: 1px solid red;
+  /* justify-content: flex-end; */
+  /* float:right; */
+}
+.selection{
+  /* width: 50%;
+  justify-content: flex-end; */
+  border: 1px solid green;
+}
+
+/* .btn{
+  align-self: flex-end;
+} */
+.selection_left{
+grid-area: leftCol;
+
+}
+.selection_right{
+  grid-area: rightCol;
+ 
+}
+.arena{
+  grid-area: arena;
+  
+  border: 1px solid pink;
 }
