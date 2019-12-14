@@ -6,11 +6,27 @@
   <link rel="stylesheet" href="pokemon.css">
   <title>Pokemon</title>
 </head>
+
 <body>
   <div class="container">
-    <div class="selection_left"> <button onclick="displayPokemon('left')">list</button><ul id="left_pokemon"></ul></div>
-    <div class="arena"><ul id="battle"><button onclick="battle()">Battle</button></ul></div>
-    <div class="selection_right"> <button class="btn" onclick="displayPokemon('right')">list</button><ul id="right_pokemon"></ul></div>
+    <div class="selection_left">
+      <button onclick="displayPokemon('left')">list</button>
+      <ul id="left_pokemon"></ul>
+    </div>
+
+    <div id="arena">
+      <div id="arena_pokemon" class="flex flex-horizontal-end">
+        <div id="left_arena_pokemon"></div>
+        <div id="right_arena_pokemon"></div>
+      </div>
+      <div id="arena_battle" class="flex flex-horizontal-center">
+      </div>
+    </div>
+
+    <div class="selection_right">
+      <button onclick="displayPokemon('right')">list</button>
+      <ul id="right_pokemon"></ul>
+    </div>
   </div>
   
 </body>

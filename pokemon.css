@@ -4,7 +4,6 @@
   width:100%;
   grid-template-areas:"leftCol arena rightCol";
   grid-template-columns: 1fr 2fr 1fr;
-  
 }
 #left_pokemon{
   border: 1px solid blue;
@@ -25,15 +24,23 @@
   align-self: flex-end;
 } */
 .selection_left{
-grid-area: leftCol;
-
+  grid-area: leftCol;
 }
 .selection_right{
   grid-area: rightCol;
- 
 }
-.arena{
-  grid-area: arena;
-  
+#arena{
+  grid-area: arena; 
   border: 1px solid pink;
+}
+.flex{
+  display: flex;
+}
+.flex-horizontal-center{
+  flex-direction: row;
+  justify-content: center;
+}
+.flex-horizontal-end{
+  flex-direction: row;
+  justify-content: space-between;
 }
