@@ -4,26 +4,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="pokemon.css">
-  <title>Pokemon</title>
+  <title>Pokemon Battle</title>
 </head>
 
 <body>
   <div class="container">
-    <div class="selection_left">
+    <div id="selection_left" class="selection">
       <button onclick="displayPokemon('left')">list</button>
       <ul id="left_pokemon"></ul>
     </div>
 
     <div id="arena">
-      <div id="arena_pokemon" class="flex flex-horizontal-end">
+      <div id="arena_top" class="flex flex-horizontal-end">
         <div id="left_arena_pokemon"></div>
         <div id="right_arena_pokemon"></div>
       </div>
-      <div id="arena_battle" class="flex flex-horizontal-center">
+      <div id="arena_mid" class="flex flex-horizontal-center">
       </div>
     </div>
 
-    <div class="selection_right">
+    <div id="selection_right" class="selection">
       <button onclick="displayPokemon('right')">list</button>
       <ul id="right_pokemon"></ul>
     </div>

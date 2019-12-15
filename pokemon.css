@@ -14,20 +14,17 @@
   /* justify-content: flex-end; */
   /* float:right; */
 }
-.selection{
-  /* width: 50%;
-  justify-content: flex-end; */
-  border: 1px solid green;
-}
-
 /* .btn{
   align-self: flex-end;
 } */
-.selection_left{
-  grid-area: leftCol;
+.selection{
+  text-align: center;
 }
-.selection_right{
-  grid-area: rightCol;
+.name{
+  font-size: 11px;
+}
+.pokemon{
+  padding: 10px;
 }
 #arena{
   grid-area: arena; 
@@ -43,4 +40,7 @@
 .flex-horizontal-end{
   flex-direction: row;
   justify-content: space-between;
+}
+.faded{
+  opacity: 0.2;
 }
