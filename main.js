@@ -1,3 +1,4 @@
+let assert = require('assert');
 let arrayOfPokemon = [];
 let leftPokemon = null;
 let rightPokemon = null;
@@ -102,7 +103,7 @@ const choosePokemon = (player, pokemon) => {
   const pokemonDiv = makePokemonDiv(pokemon);
 
   // If game was over, reset
-  if(gameOver) {
+  if (gameOver) {
     reset();
   }
 
@@ -179,4 +180,58 @@ const reset = () => {
   gameOver = false;
 };
 
+
+
+//Unit tests
+
+//test
+if (typeof describe === 'function') {
+  describe('getPokemonNames', function () {
+    it('works in the basic case', () => {
+      const fakefetch = url => {
+      assert(url === 'https://pokeapi.co/api/v2/pokemon/123')
+      return new Promise(function(resolve){
+
+      })
+    }
+    getPokemonNames(fakefetch,123)
+  });
+
+//   describe('MakeRedTeam', function () {
+//     it('should have a id, name, age, skillSet, placeBorn, canThrowBall, canDodgeBall, hasPaid, isHealthy, yearsExperience, mascot, teamcolor', function () {
+//       let redTeam1 = new RedTeammate(2, 'Judy Twilight', 35, 'fishing', 'Louisville, Kentucky', true, true, true, true, 10, 'Tiger', 'Red');
+//       assert.equal(redTeam1.id, 2);
+//       assert.equal(redTeam1.name, "Judy Twilight");
+//       assert.equal(redTeam1.age, 35);
+//       assert.equal(redTeam1.skillSet, "fishing");
+//       assert.equal(redTeam1.placeBorn, "Louisville, Kentucky");
+//       assert.equal(redTeam1.canThrowBall, true);
+//       assert.equal(redTeam1.canDodgeBall, true);
+//       assert.equal(redTeam1.hasPaid, true);
+//       assert.equal(redTeam1.isHealthy, true);
+//       assert.equal(redTeam1.yearsExperience, 10);
+//       assert.equal(redTeam1.mascot, "Tiger");
+//       assert.equal(redTeam1.teamcolor, "Red");
+
+//     });
+//   });
+
+//   describe('MakeBlueTeam', function () {
+//     it('should have a id, name, age, skillSet, placeBorn, canThrowBall, canDodgeBall, hasPaid, isHealthy, yearsExperience, mascot, teamcolor', function () {
+//       let blueTeam1 = new BlueTeammate(3, 'Argo Khon', 15, 'skating', 'Missouri', true, false, true, true, 1, 'Dog', 'blue');
+//       assert.equal(blueTeam1.id, 3);
+//       assert.equal(blueTeam1.name, "Argo Khon");
+//       assert.equal(blueTeam1.age, 15);
+//       assert.equal(blueTeam1.skillSet, "skating");
+//       assert.equal(blueTeam1.placeBorn, "Missouri");
+//       assert.equal(blueTeam1.canThrowBall, true);
+//       assert.equal(blueTeam1.canDodgeBall, false);
+//       assert.equal(blueTeam1.hasPaid, true);
+//       assert.equal(blueTeam1.isHealthy, true);
+//       assert.equal(blueTeam1.yearsExperience, 1);
+//       assert.equal(blueTeam1.mascot, "Dog");
+//       assert.equal(blueTeam1.teamcolor, "blue");
+//     });
+//   });
+// }
 
