@@ -1,4 +1,3 @@
-let assert = require('assert');
 let arrayOfPokemon = [];
 let leftPokemon = null;
 let rightPokemon = null;
@@ -44,9 +43,9 @@ const getPokemonData = (pokemon) => {
 //display pokemon
 const displayPokemon = (player) => {
   const pokemonList = document.getElementById(`${player}_pokemon`);
-  if (pokemonList.hasChildNodes()) {
-    return;
-  }
+  // if (pokemonList.hasChildNodes()) {
+  //   return;
+  // }
 
   arrayOfPokemon.map(pokemon => {
     const div = makePokemonDiv(pokemon);

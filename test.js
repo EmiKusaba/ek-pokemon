@@ -34,6 +34,34 @@ const getPokemonData = (fetch, pokemon) => {
     .catch(err => console.log(`Error,  ${err}`));
 };
 
+// //To judge the who's win
+const battle = (leftPokemon, rightPokemon) => {
+  const leftScore = calculateScore(leftPokemon);
+  const rightScore = calculateScore(rightPokemon);
+
+const losers = [];
+  if (leftScore === rightScore) {
+    // Draw
+    caption.innerText = "It's a draw!";
+    losers.push(left, right);
+  } else if (leftScore > rightScore) {
+    // Left wins
+    caption.innerText = "Left wins!";
+    losers.push(right);
+  } else {
+    // Right wins
+    caption.innerText = "Right wins!";
+    losers.push(left);
+  }
+  const calculateScore = (pokemon) => {
+    // To keep it simple, we just sum up all stats
+    const total = pokemon.stats.reduce((sum, x) => sum + x.base_stat, 0);
+    return total;
+  };
+
+
+
+
 //Unit tests
 
 if (typeof describe === 'function') {
@@ -50,7 +78,7 @@ if (typeof describe === 'function') {
       arrayOfPokemon = [];
       error = null;
       const fakeFetch = (url) => {
-        const MAX_POKEMON = 151;
+        const MAX_POKEMON = 807;
         const params = new URLSearchParams(url.split("?")[1].split("/")[0]);
         const offset = params.get("offset") || 0;
         const limit = params.get("limit") || 0;
@@ -66,9 +94,18 @@ if (typeof describe === 'function') {
         return Promise.resolve({});    
       };
 
-      getPokemonNames(fakeFetch, 140, 20);
+      getPokemonNames(fakeFetch, 808, 20);
       assert.equal(0, arrayOfPokemon.length);
-      assert.equal("Out of range: offset=140 limit=20", error);
+      // assert.equal(`Out of range: offset=${offset} limit=${limit}`, error);
+
+      //know winner
+      if (typeof describe === 'function') {
+        describe('calculateScore', function () {
+      it('should be able to calculate score', () => {
+        const pikacyu = getPokemonData
+        const total = pokemon.stats.reduce((sum, x) => sum + x.base_stat, 0);
+        return total;
+      })
     });
 
 
@@ -76,7 +113,6 @@ if (typeof describe === 'function') {
 }
 
 
-//Out of range request
-//Wrong api key
+
 //Hypothetical 4
 //Hypothetical 5
